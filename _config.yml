@@ -58,4 +58,4 @@ remote_theme: sylhare/Type-on-Strap                     # If using as a remote_t
 # Google Maps API
 maps:
   google:
-    api_key: AIzaSyBZ2-oiaczuQy9jx-UYu8BS5qn_2saXc48
+    api_key: <KEY>
