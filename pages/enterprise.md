@@ -10,19 +10,7 @@ Tech Ceylon is happy to launch a pilot version of the Enterprise Mapping Project
 
 With time we hope to add greater functionality. As things are, you can zoom in and out to view the total number of enterprises according to geographic hierarchy. You can also hover above individual pins to view the name of the business.
 
-<div id="map">
-</div>
-
- ```js
-    let map;
-
-    function initMap() {
-      map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
-      });
-    }
-    ```
+{% include google-map.html latitude=-45.8787605 longitude=170.5027976 zoom=5 %}
 
 You can search for individual businesses or sort the entire list by DS Division or type of business.
 
