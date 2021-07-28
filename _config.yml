@@ -56,4 +56,4 @@ exclude: [".jekyll-cache", ".idea", "vendor/*", "assets/node_modules/*"]
 remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github
 
 # Mapping
-google_maps_javascript_api_key: "AIzaSyBZ2-oiaczuQy9jx-UYu8BS5qn_2saXc48"
+google_maps_javascript_api_key: "XXXXXXX"
