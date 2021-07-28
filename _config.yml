@@ -56,10 +56,4 @@ exclude: [".jekyll-cache", ".idea", "vendor/*", "assets/node_modules/*"]
 remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github
 
 # Mapping
-mapping:
-    provider: openstreetmap
-    api_key: AIzaSyDNhj22EqZoDYXSF90FMCQjS-nQx4JG4uI
-    zoom: 10
-    dimensions:
-        width: 600
-        height: 400
+google_maps_javascript_api_key: "AIzaSyBZ2-oiaczuQy9jx-UYu8BS5qn_2saXc48"
