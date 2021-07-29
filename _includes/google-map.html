@@ -80,12 +80,20 @@ myData = [
 
 
 alert("To see the title of a marker, hover over the marker but don't click.");
-var myLatlng = new google.maps.LatLng(9.534597, 80.299682)
-var mapOptions = {
-  zoom: 9,
-  center: myLatlng,
-  mapTypeId: google.maps.MapTypeId.ROADMAP
-}
+var myLatlng = new google.maps.LatLng(9.534597, 80.299682);
+
+function initMap() {
+	var myOptions = {
+	scrollwheel: false,
+	draggable: false,
+	panControl: false,
+	disableDefaultUI: true,
+	zoom: window.mapData.zoom,
+	maxZoom: window.mapData.zoom,
+	minZoom: window.mapData.zoom,
+	center: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude),
+	mapTypeId: google.maps.MapTypeId.ROADMAP
+};
 
 var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
@@ -110,4 +118,4 @@ var options = {
 var markerCluster = new MarkerClusterer(map, markers, options);
 
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjMt-QLXQTjsnBUbLDVJ74QWR4jcH81jY&callback=initMap">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjMt-QLXQTjsnBUbLDVJ74QWR4jcH81jY&amp;callback=initMap">
