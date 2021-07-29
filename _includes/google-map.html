@@ -83,12 +83,20 @@ myData = [
 function initialize() {
 alert("To see the title of a marker, hover over the marker but don't click.");
 var myLatlng = new google.maps.LatLng(9.534597, 80.299682)
-var mapOptions = {
-  zoom: 9,
-  center: myLatlng,
-  mapTypeId: google.maps.MapTypeId.ROADMAP
-}
-var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+function initMap() {
+	var myOptions = {
+	scrollwheel: false,
+	draggable: false,
+	panControl: false,
+	disableDefaultUI: true,
+	zoom: window.mapData.zoom,
+	maxZoom: window.mapData.zoom,
+	minZoom: window.mapData.zoom,
+	center: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude),
+	mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+
+var map = new google.maps.Map(document.getElementById('map'), myOptions);
 
 i = 0;
 var markers = [];
