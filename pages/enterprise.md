@@ -12,7 +12,7 @@ With time we hope to add greater functionality. As things are, you can zoom in a
 
 {% include google-map.html %}
 
-You can search for individual businesses or sort the entire list by DS Division or type of business.
+Following is the full list of SMEs.
 
 |Company_Name                                                         |DS Division     |Long Form Address            |Type             |Name of contact person           |Contact number              |
 |---------------------------------------------------------------------|----------------|-----------------------------|-----------------|---------------------------------|----------------------------|
