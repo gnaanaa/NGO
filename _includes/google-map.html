@@ -1,4 +1,4 @@
-<div id="map" style="width:300px;height:300px;"></div>
+<div id="map" style="width:300px;height:300px;" onload="initialize()"></div>
 
 <script>
 myData = [
@@ -79,23 +79,15 @@ myData = [
 ];
 
 
+function initialize() {
 alert("To see the title of a marker, hover over the marker but don't click.");
-var myLatlng = new google.maps.LatLng(9.534597, 80.299682);
-
-function initMap() {
-	var myOptions = {
-	scrollwheel: false,
-	draggable: false,
-	panControl: false,
-	disableDefaultUI: true,
-	zoom: window.mapData.zoom,
-	maxZoom: window.mapData.zoom,
-	minZoom: window.mapData.zoom,
-	center: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude),
-	mapTypeId: google.maps.MapTypeId.ROADMAP
-};
-
-var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+var myLatlng = new google.maps.LatLng(9.534597, 80.299682)
+var mapOptions = {
+  zoom: 9,
+  center: myLatlng,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+}
+var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 
 i = 0;
 var markers = [];
@@ -103,6 +95,7 @@ for ( pos in myData ) {
 	i = i + 1;
 	var row = myData[pos];
 	window.console && console.log(row);
+	// if ( i < 3 ) { alert(row); }
 	var newLatlng = new google.maps.LatLng(row[0], row[1]);
 	var marker = new google.maps.Marker({
 		position: newLatlng,
@@ -110,12 +103,14 @@ for ( pos in myData ) {
 		title: row[2]
 	});
 	markers.push(marker);
+<!-- New options for MarkerClusterer function to display markers -->
 var options = {
 	imagePath: 'http://rawgit.com/googlemaps/js-marker-clusterer/gh-pages/images/m'
 	}
 }
-
+<!-- New var -->
 var markerCluster = new MarkerClusterer(map, markers, options);
+}
 
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjMt-QLXQTjsnBUbLDVJ74QWR4jcH81jY&amp;callback=initMap">
