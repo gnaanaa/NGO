@@ -1,4 +1,4 @@
-<div id="map" style="width:300px;height:300px;" onload="initialize()"></div>
+<div id="map" style="width:300px;height:300px;" ></div>
 
 <script>
 
@@ -79,9 +79,7 @@ myData = [
 [9.6614981,80.02554649999999, 'North Lanka Product Chemical Liquid & Mixer']
 ];
 
-
-function initialize() {
-alert("To see the title of a marker, hover over the marker but don't click.");
+//alert("To see the title of a marker, hover over the marker but don't click.");
 var myLatlng = new google.maps.LatLng(9.534597, 80.299682)
 function initMap() {
 	var myOptions = {
@@ -119,7 +117,6 @@ var options = {
 }
 <!-- New var -->
 var markerCluster = new MarkerClusterer(map, markers, options);
-}
 
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
